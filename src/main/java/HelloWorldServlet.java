@@ -8,8 +8,8 @@ import java.io.PrintWriter;
 @WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        int count = Integer.parseInt(req.getParameter("count"));
-        String name = req.getParameter("name");
+//        int count = Integer.parseInt(req.getParameter("count"));
+        int count;
 
 
         try {
@@ -17,6 +17,8 @@ public class HelloWorldServlet extends HttpServlet {
         } catch (Exception e) {
             count = 1;
         }
+
+        String name = req.getParameter("name");
 
         if (name == null){
             name = "World";
