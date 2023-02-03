@@ -10,6 +10,12 @@
 <head>
     <title>View Color JSP</title>
 </head>
+<p id="test"></p>
+<style>
+    test {
+        background-color:  <%= request.getAttribute("colorToView") %>;
+    }
+</style>
 <body>
 
 </body>

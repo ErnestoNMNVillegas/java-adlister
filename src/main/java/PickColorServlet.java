@@ -14,17 +14,15 @@ public class PickColorServlet extends HttpServlet {
         req.getRequestDispatcher("WEB-INF/pickcolor.jsp").forward(req, resp);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String pickedColor = request.getParameter("pickColor");
-
-        System.out.println("pickedColor = " + pickedColor);
-
-        request.setAttribute("colorToView", pickedColor);
-
-        RequestDispatcher dispatch = request.getRequestDispatcher("/ViewColorServlet");
-        dispatch.forward(request, response);
-
-
-    }
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+//        String pickedColor = request.getParameter("pickColor");
+//
+//        System.out.println("pickedColor = " + pickedColor);
+//
+//        request.setAttribute("colorToView", pickedColor);
+//
+//        RequestDispatcher dispatch = request.getRequestDispatcher("/viewcolor");
+//        dispatch.forward(request, response);
+//    }
 
 }
