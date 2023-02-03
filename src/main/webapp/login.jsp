@@ -23,5 +23,16 @@
         <input type="submit" value="Login">
         </label>
     </form>
+
+    <% String userName = request.getParameter("username");
+     String passWord = request.getParameter("password");
+
+    if (userName.equals("admin") && passWord.equals("password")) {
+    response.sendRedirect("profile.jsp");
+    } else {
+    response.sendRedirect("login.jsp");
+    }
+    %>
+
 </body>
 </html>
