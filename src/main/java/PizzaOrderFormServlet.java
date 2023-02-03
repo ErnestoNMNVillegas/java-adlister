@@ -11,7 +11,7 @@ public class PizzaOrderFormServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("pizzaOrderForm.jsp").forward(req, resp);
+        req.getRequestDispatcher("WEB-INF/pizzaOrderForm.jsp").forward(req, resp);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String pizzaCrust = request.getParameter("pizzaCrust");
