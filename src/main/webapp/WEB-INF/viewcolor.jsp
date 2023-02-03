@@ -13,7 +13,7 @@
 <p id="test"></p>
 <style>
     test {
-        background-color:  <%= request.getAttribute("colorToView") %>;
+        background-color:  ${color} %>;
     }
 </style>
 <body>
