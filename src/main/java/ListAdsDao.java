@@ -4,11 +4,17 @@ import java.util.List;
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
 
+
     public List<Ad> all() {
         if (ads == null) {
             ads = generateAds();
         }
         return ads;
+    }
+
+    @Override
+    public void insert(Ad ad) {
+        this.ads.add(ad);
     }
 
     private List<Ad> generateAds() {
