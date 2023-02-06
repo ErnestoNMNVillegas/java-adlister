@@ -7,16 +7,20 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
 <head>
     <title>View Color JSP</title>
+
+    <style>
+        body {
+            background-color: ${color};
+        }
+    </style>
+
 </head>
-<p id="test"></p>
-<style>
-    test {
-        background-color:  ${color} %>;
-    }
-</style>
 <body>
+
+<p id="test">Picked Color</p>
 
 </body>
 </html>
