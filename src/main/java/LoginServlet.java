@@ -10,6 +10,18 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+//        HttpSession session = request.getSession();
+//        String user = (String) session.getAttribute("user");
+
+//        System.out.println("1user = " + user);
+
+        if (request.getSession().getAttribute("user") == null) {
+            response.sendRedirect("/login");
+        } else {
+            response.sendRedirect("/profile");
+        }
+
+//        System.out.println("2user = " + user);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -20,11 +32,11 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
 //        String user = (String) request.getSession().getAttribute("user");
 
-        if (session.getAttribute("user") != null) {
-            response.sendRedirect("/profile");
-        }
-
-        System.out.println("1session.getAttribute(\"user\") = " + request.getSession().getAttribute("user"));
+//        if (session.getAttribute("user") != null) {
+//            response.sendRedirect("/profile");
+//        }
+//
+//        System.out.println("1session.getAttribute(\"user\") = " + request.getSession().getAttribute("user"));
 
 
 
