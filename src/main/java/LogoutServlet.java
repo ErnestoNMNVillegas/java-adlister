@@ -16,6 +16,7 @@ public class LogoutServlet extends HttpServlet {
         request.getSession().invalidate();
         System.out.println("request.getSession().getAttribute(\"user\") = " + request.getSession().getAttribute("user"));
         response.sendRedirect("/login");
+//        Note:  note above should be in doGet.  Maybe, you used buttton.
     }
     }
 
