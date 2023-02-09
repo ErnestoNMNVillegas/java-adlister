@@ -72,7 +72,7 @@ public class MySQLAdsDao implements Ads {
             System.out.println("ad.getUserId() = " + ad.getUserId());
             statement.executeUpdate("INSERT INTO ads (user_id, title, description) VALUES "
                     + "(" + ad.getUserId() + ", "
-                    + "'" + ad.getTitle() +"', "
+                    + "'" + ad.getTitle() + "', "
                     + "'" + ad.getDescription() + "')", statement.RETURN_GENERATED_KEYS);
             ResultSet rs = statement.getGeneratedKeys();
             rs.next();
@@ -81,6 +81,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException(e);
         }
     }
+
 
 
     public Connection getConnection() {
