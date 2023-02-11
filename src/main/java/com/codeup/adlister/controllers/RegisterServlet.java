@@ -22,7 +22,7 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
-        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+        String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt(12));
 
 //        String password = BCrypt.hashpw(request.getParameter("password"), BCrypt.gensalt());
 //        String passwordConfirmation = BCrypt.hashpw(request.getParameter("confirm_password"), BCrypt.gensalt());
